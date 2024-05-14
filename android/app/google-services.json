@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "679380756360",
+    "project_id": "student-scratch",
+    "storage_bucket": "student-scratch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679380756360:android:1884bdd5c2e99a5b83bc3d",
+        "android_client_info": {
+          "package_name": "com.example.student_reg_firbase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnHFKhv1eFQ9Br8YZVMY8915O944lPAmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
