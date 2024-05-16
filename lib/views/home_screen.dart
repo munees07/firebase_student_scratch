@@ -72,8 +72,9 @@ class HomeScreen extends StatelessWidget {
                                       Provider.of<FireBaseProvider>(context,
                                               listen: false)
                                           .deleteStudent(id);
-                                      
-                                          FirestoreServices().deleteImage(students.image,context);
+
+                                      FirestoreServices()
+                                          .deleteImage(students.image, context);
                                       successMessage(context,
                                           message: 'deleted successfully');
                                     })
@@ -104,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                                           const Gap(15)
                                         ],
                                       ),
-                                      const Gap(40),
+                                      const Gap(50),
                                       Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,

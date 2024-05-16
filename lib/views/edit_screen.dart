@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_null_comparison
+// ignore_for_file: unnecessary_null_comparison, use_build_context_synchronously
 
 import 'dart:io';
 
@@ -44,7 +44,7 @@ class _EditScreenState extends State<EditScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: 40, right: 20, left: 20),
+        margin: const EdgeInsets.only(top: 40, right: 20, left: 20),
         child: Consumer<ImagesProvider>(builder: (context, provider, child) {
           return Column(
             children: [
@@ -71,26 +71,30 @@ class _EditScreenState extends State<EditScreen> {
                   }
                 },
               ),
-              Gap(10),
+              const Gap(10),
               ElevatedButton(
                   onPressed: () {
                     provider.pickImg(ImageSource.gallery);
                     isNewImagePicked = true;
                   },
-                  child: Text('pick image')),
-              Gap(10),
+                  child: const Text('pick image')),
+              const Gap(10),
               textFieldWidget(controller: nameController, text: 'Name'),
-              Gap(10),
+              const Gap(10),
               textFieldWidget(controller: ageController, text: 'Age'),
-              Gap(10),
+              const Gap(10),
               textFieldWidget(controller: courseController, text: 'Course'),
-              Gap(20),
+              const Gap(20),
               ElevatedButton(
-                  onPressed: () {
-                    editStudentData(context, widget.students.image);
+                  onPressed: () async {
+                    await editStudentData(context, widget.students.image);
+
+                    successMessage(context,
+                        message: 'Details Edited successfully');
+
                     Navigator.pop(context);
                   },
-                  child: Text('UPDATE'))
+                  child: const Text('UPDATE'))
             ],
           );
         }),
@@ -112,6 +116,5 @@ class _EditScreenState extends State<EditScreen> {
         image: services.url);
 
     provider.editStudent(widget.id, newData);
-    successMessage(context, message: 'Details Edited successfully');
   }
 }
