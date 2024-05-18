@@ -42,6 +42,7 @@ class _EditScreenState extends State<EditScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Image.asset(
@@ -96,19 +97,20 @@ class _EditScreenState extends State<EditScreen> {
                   textFieldWidget(controller: ageController, text: 'Age'),
                   const Gap(10),
                   textFieldWidget(controller: courseController, text: 'Course'),
-                  const Gap(20),
+                  const Gap(30),
                   ElevatedButton(
                       style: const ButtonStyle(
+                          padding: MaterialStatePropertyAll(
+                              EdgeInsets.symmetric(
+                                  horizontal: 70, vertical: 15)),
                           foregroundColor:
                               MaterialStatePropertyAll(Colors.black54),
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.amberAccent)),
                       onPressed: () async {
                         await editStudentData(context, widget.students.image);
-
                         successMessage(context,
                             message: 'Details Edited successfully');
-
                         Navigator.pop(context);
                       },
                       child: const Text('UPDATE',

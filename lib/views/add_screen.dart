@@ -25,6 +25,7 @@ class AddScreen extends StatelessWidget {
         Provider.of<ImagesProvider>(context, listen: false).clearPickedImage();
       },
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.grey[300],
         body: Stack(
           children: [
@@ -36,7 +37,7 @@ class AddScreen extends StatelessWidget {
                 'assets/student_background.png'),
             SingleChildScrollView(
               child: Container(
-                margin: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                margin: const EdgeInsets.only(top: 30, left: 30, right: 30),
                 child: Column(
                   children: [
                     const Gap(40),
@@ -72,10 +73,13 @@ class AddScreen extends StatelessWidget {
                     const Gap(10),
                     textFieldWidget(
                         controller: courseController, text: 'Course'),
-                    const Gap(20),
+                    const Gap(30),
                     Center(
                       child: ElevatedButton(
                           style: const ButtonStyle(
+                              padding: MaterialStatePropertyAll(
+                                  EdgeInsets.symmetric(
+                                      horizontal: 70, vertical: 15)),
                               foregroundColor:
                                   MaterialStatePropertyAll(Colors.black54),
                               backgroundColor:
