@@ -31,7 +31,6 @@ class HomeScreen extends StatelessWidget {
             },
             child: const Icon(Icons.add, color: Colors.white)),
         body: Stack(
-          
           children: [
             Image.asset(
                 alignment: Alignment.centerRight,
