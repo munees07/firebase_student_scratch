@@ -1,7 +1,5 @@
-
-
+// ignore_for_file: unnecessary_null_comparison, use_build_context_synchronously
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +23,6 @@ class _EditScreenState extends State<EditScreen> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController ageController = TextEditingController();
   final TextEditingController courseController = TextEditingController();
-
   bool isNewImagePicked = false;
 
   @override
