@@ -45,7 +45,7 @@ class AddScreen extends StatelessWidget {
                           Provider.of<ImagesProvider>(context).pickedImage),
                       builder: (context, snapshot) {
                         return CircleAvatar(
-                            backgroundColor: Colors.amberAccent,
+                            backgroundColor: Colors.amber,
                             radius: 40,
                             backgroundImage: snapshot.data != null
                                 ? FileImage(snapshot.data!)
