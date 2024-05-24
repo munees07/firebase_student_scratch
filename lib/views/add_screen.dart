@@ -56,9 +56,9 @@ class AddScreen extends StatelessWidget {
                     ElevatedButton(
                         style: const ButtonStyle(
                             foregroundColor:
-                                MaterialStatePropertyAll(Colors.black54),
+                                WidgetStatePropertyAll(Colors.black54),
                             backgroundColor:
-                                MaterialStatePropertyAll(Colors.amberAccent)),
+                                WidgetStatePropertyAll(Colors.amberAccent)),
                         onPressed: () {
                           Provider.of<ImagesProvider>(context, listen: false)
                               .pickImg();
@@ -76,13 +76,13 @@ class AddScreen extends StatelessWidget {
                     Center(
                       child: ElevatedButton(
                           style: const ButtonStyle(
-                              padding: MaterialStatePropertyAll(
+                              padding: WidgetStatePropertyAll(
                                   EdgeInsets.symmetric(
                                       horizontal: 70, vertical: 15)),
                               foregroundColor:
-                                  MaterialStatePropertyAll(Colors.black54),
+                                  WidgetStatePropertyAll(Colors.black54),
                               backgroundColor:
-                                  MaterialStatePropertyAll(Colors.amberAccent)),
+                                  WidgetStatePropertyAll(Colors.amberAccent)),
                           onPressed: () async {
                             await addstudentData(context);
                             Navigator.pop(context);

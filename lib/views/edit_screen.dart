@@ -79,9 +79,9 @@ class _EditScreenState extends State<EditScreen> {
                   ElevatedButton(
                       style: const ButtonStyle(
                           foregroundColor:
-                              MaterialStatePropertyAll(Colors.black54),
+                              WidgetStatePropertyAll(Colors.black54),
                           backgroundColor:
-                              MaterialStatePropertyAll(Colors.amberAccent)),
+                              WidgetStatePropertyAll(Colors.amberAccent)),
                       onPressed: () {
                         provider.editPickImg();
                         isNewImagePicked = true;
@@ -97,13 +97,13 @@ class _EditScreenState extends State<EditScreen> {
                   const Gap(30),
                   ElevatedButton(
                       style: const ButtonStyle(
-                          padding: MaterialStatePropertyAll(
+                          padding: WidgetStatePropertyAll(
                               EdgeInsets.symmetric(
                                   horizontal: 70, vertical: 15)),
                           foregroundColor:
-                              MaterialStatePropertyAll(Colors.black54),
+                              WidgetStatePropertyAll(Colors.black54),
                           backgroundColor:
-                              MaterialStatePropertyAll(Colors.amberAccent)),
+                              WidgetStatePropertyAll(Colors.amberAccent)),
                       onPressed: () async {
                         await editStudentData(context, widget.students.image);
                         successMessage(context,
